@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "sam-cog-authorizer"
+resolve_s3 = true
+s3_prefix = "sam-cog-authorizer"
+region = "eu-west-1"
+profile = "personal"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "AppName=\"sam-cog-authorizer\""
+image_repositories = []

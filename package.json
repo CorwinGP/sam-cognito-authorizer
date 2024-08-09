@@ -1,0 +1,18 @@
+{
+  "name": "sam-api-gateway-cognito-user-pools-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "stackName": "learning-serverless-sam-api-gateway-cognito-user-pools-auth",
+    "bucketName": "learning-serverless-publish-sam-app"
+  },
+  "scripts": {
+    "deploy": "sam build && sam deploy --no-confirm-changeset --profile personal",
+    "deploy:guided": "sam build && sam deploy -g --profile personal",
+    "describe": "aws cloudformation describe-stacks --region us-east-1 --stack-name $npm_package_config_stackName --query 'Stacks[].Outputs'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
